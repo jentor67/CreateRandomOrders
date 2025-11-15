@@ -1,0 +1,105 @@
+{
+    "items": [
+      {
+        "id": 1,
+        "description": "Large Shirt", 
+        "location": "A33-4"
+      },
+      {
+        "id": 2,
+        "description": "Medium Shirt", 
+        "location": "A22-5"
+      },
+      {
+        "id": 3,
+        "description": "Small Shirt", 
+        "location": "B12-5"
+      },
+      {
+        "id": 4,
+        "description": "X-Small Shirt", 
+        "location": "Z12-3"
+      },
+      {
+        "id": 5,
+        "description": "X-Large Shirt", 
+        "location": "A14-1"
+      },
+      {
+        "id": 6,
+        "description": "Blue Large Shirt", 
+        "location": "A34-7"
+      },
+      {
+        "id": 7,
+        "description": "Red Large Shirt", 
+        "location": "A04-1"
+      },
+      {
+        "id": 8,
+        "description": "Yellow Large Shirt", 
+        "location": "B23-9"
+      },
+      {
+        "id": 9,
+        "description": "Blue Small Shirt", 
+        "location": "C18-4"
+      },
+      {
+        "id": 10,
+        "description": "Green Small Shirt", 
+        "location": "D18-4"
+      },
+      {
+        "id": 11,
+        "description": "Green Medium Shirt", 
+        "location": "E17-2"
+      },
+      {
+        "id": 12,
+        "description": "Green Large Shirt", 
+        "location": "F22-3"
+      },
+      {
+        "id": 13,
+        "description": "Green X-Large Shirt", 
+        "location": "G11-5"
+      },
+      {
+        "id": 14,
+        "description": "Mango X-Large Shirt", 
+        "location": "H04-2"
+      },
+      {
+        "id": 15,
+        "description": "Mango Large Shirt", 
+        "location": "H05-3"
+      },
+      {
+        "id": 16,
+        "description": "Mango Medium Shirt", 
+        "location": "H03-5"
+      },
+      {
+        "id": 17,
+        "description": "Mango Small Shirt", 
+        "location": "I05-2"
+      },
+      {
+        "id": 18,
+        "description": "Mango X-Small Shirt", 
+        "location": "H04-8"
+      },
+      {
+        "id": 19,
+        "description": "Red X-Small Shirt", 
+        "location": "G07-3"
+      },
+      {
+        "id": 20,
+        "description": "Red Small Shirt", 
+        "location": "G03-4"
+      }
+   ]
+}
+
