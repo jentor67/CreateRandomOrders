@@ -30,13 +30,14 @@ numberofInvoices = random.randint(1,10)
 listOfInvoices = random.sample(range(1,11),numberofInvoices)
 
 
-#create pdf instance
+#create FPDF instance
 pdf = FPDF(orientation='P', unit='in', format='Letter')
 
 pdf.set_font("Arial", size=12)
 
 for i in listOfInvoices:
-#for index, i in enumerate(listOfInvoices):
+
+    #for index, i in enumerate(listOfInvoices):
     page = 1
     pdf.add_page()
 
@@ -54,7 +55,7 @@ for i in listOfInvoices:
     pages = pcm.pageCount(numberofItems)
 
     ###################################
-
+    # collect fields
     addressID = listOfResult[0][0]
     name = listOfResult[0][1]
     address = listOfResult[0][2]
@@ -62,16 +63,16 @@ for i in listOfInvoices:
     state = listOfResult[0][4]
     zipCode = listOfResult[0][5]
 
+    # create an instance of Address class
     printAddress = am.Address(pdf, addressID, name, address, city, 
         state, zipCode)
-
+    # print address
     printAddress.printaddress(1,2)
 
-    printAddress.printAddressID(5, 1,pages,numberofItems)
+    #print Header info
+    printAddress.printHeader(pages,numberofItems, page)
 
-    theThird = 11/3
-    width = 8.5-ct.pageMargin
-    printAddress.drawAddressBorder(ct.pageMargin, theThird, width, theThird)
+    printAddress.drawAddressBorder()
 
     start = ct.detailStartPage1+.25
     pdf.set_xy(ct.pageMargin,start) 
@@ -82,20 +83,21 @@ for i in listOfInvoices:
         description = listOfResult[0][1]
         location = listOfResult[0][2]
 
-        # create object
+        # create instance of Detail class
         detailLine = detm.Detail(pdf, itemID, description, location)
+
         # print detail
         detailLine.detailPrint()
 
         start = start + ct.heightOfItems
-#for idx, value in enumerate(items):
-#    if idx == len(items) - 1:
+
         # test if changing the page
         if (start + ct.heightOfItems) > ct.detailEnd and \
             index != (len(listOfItems) - 1):
             page = page + 1
             start = ct.detailStartOverPage1
             pdf.add_page()
+            printAddress.printHeader(pages,numberofItems, page)
 
         pdf.set_xy(ct.pageMargin,start) 
 

@@ -17,10 +17,14 @@ class Detail:
         self.location = l
   
     def detailPrint(self):
+        # save the x y location so that it can be reset
         saved_x = self.pdf.get_x()
         saved_y = self.pdf.get_y()
+
+        # set font to bold
         self.pdf.set_font("Arial", 'B', size=12)
 
+        #### titles
         self.pdf.cell(1,.25,"Item ID",align='L',border=0)
 
         self.pdf.set_xy(2,self.pdf.get_y())
@@ -32,19 +36,18 @@ class Detail:
         self.pdf.set_xy(7,self.pdf.get_y())
         self.pdf.cell(1,.25,"Qty",align='L',border=0)
 
-        
+        #### line 
         self.pdf.set_xy(ct.pageMargin,self.pdf.get_y()+.25)
         self.pdf.line(
                 x1=ct.pageMargin,
                 y1=self.pdf.get_y(), 
                 x2=8.5-ct.pageMargin,
                 y2=self.pdf.get_y())
-        self.pdf.set_font("Arial", size=12)
+        self.pdf.set_font("Arial", size=12) # turn off bold
 
+        #### detail
         self.pdf.set_xy(ct.pageMargin,self.pdf.get_y()+.05)
-
         self.pdf.cell(1,.25,str(self.itemID),align='L',border=0)
-
 
         self.pdf.set_xy(2,self.pdf.get_y())
         self.pdf.cell(3,.25,self.description,align='L',border=0)
@@ -52,9 +55,8 @@ class Detail:
         self.pdf.set_xy(5,self.pdf.get_y())
         self.pdf.cell(2,.25,self.location,align='L',border=0)
 
-  
         self.pdf.set_xy(7,self.pdf.get_y())
         self.pdf.cell(1,.25,str(random.randint(1,20)),align='L',border=0)
 
-        self.pdf.set_font("Arial", size=12)
+        ### reset xy location
         self.pdf.set_xy(saved_x,saved_y)

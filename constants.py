@@ -6,12 +6,16 @@ Author: John Major
 Date: 2025-11-14
 Description:  file that list constant values
 """
+paperLength = 11
+paperWidth = 8.5
+thirdOfPage = paperLength/3
 pageMargin = .5
 detailWidth = 8.5 - 2*pageMargin
 detailStartPage1 = 11/3
 detailStartOverPage1 = 1
 detailEnd = 11 - detailStartOverPage1
 heightOfItems = 1
+width = 8.5
 
 
 
