@@ -1,2 +1,2 @@
 # CreateRandomOrders
-Using python random orders and send them to a PDF
+Using python create random orders and send them to a PDF
