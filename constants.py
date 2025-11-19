@@ -6,9 +6,9 @@ Author: John Major
 Date: 2025-11-14
 Description:  file that list constant values
 """
-paperLength = 11
-paperWidth = 8.5
-thirdOfPage = paperLength/3
+pageLength = 11
+pageWidth = 8.5
+thirdOfPage = pageLength/3
 pageMargin = .5
 detailWidth = 8.5 - 2*pageMargin
 detailStartPage1 = 11/3
